@@ -10,7 +10,7 @@ This module is composed by a class that dfines a Rectangle
 class Rectangle:
     """ class that defines a rectangle """
 
-    def_int_(self, width=0, height=0):
+    def _int_(self, width=0, height=0):
         """ Method that initializes the instance
 
         Args:
@@ -49,7 +49,7 @@ class Rectangle:
             """
 
             if not isinstance(value,int):
-                raise typeError("width must be an integer")
+                raise TypeError("width must be an integer")
             if value < 0:
                 raise ValueError("width must be >= 0")
             self._width = value
@@ -66,7 +66,7 @@ class Rectangle:
 
             return self._height
 
-        @height(self, value):
+        @height.setter
         def height(self, value):
             """ method that defines the height
 
@@ -74,8 +74,8 @@ class Rectangle:
                 value: height
 
             Raises:
-            TypeError: if height is not an integer
-            ValueError: if height is less than zero
+                TypeError: if height is not an integer
+                ValueError: if height is less than zero
 
 
             """
