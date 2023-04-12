@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Defines an subclass or child list class MyList."""
-
-
 class MyList(list):
-    """These class is a subclass of the list class."""
+    """ Class that inherits the attributes references of class list
+    Args:
+        list: class list
+    """
 
     def print_sorted(self):
-        """Print a sorted list in a specific pattern."""
-        print(sorted(self))
+        """ Method that prints the sorted list """
+        l_sorted = self.copy()
+        l_sorted.sort()
+        print(l_sorted)
